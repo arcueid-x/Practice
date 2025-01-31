@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | QR code component</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit',serif;
+    }
+    body{
+      background: #F0F0F0;
+    }
+    .outer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1440px;
+      height: 910px;
+      background-color: #D6E1EF;
+      margin: 100px auto;
+    }
+    .qrcode{
+      width: 355px;
+      height: 355px;
+      border-radius: 10%;
+    }
+    .inner{
+      height: 620px;
+      width: 400px;
+      background: hsl(0, 0%, 100%);
+      border-radius: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 395px 100px 100px;
+      justify-items: center;
+      align-items: center;
+    }
+    #box1{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr;
+      font-weight: 700;
+      font-size: 25px;
+      justify-items: center;
+      align-items: center;
+    }
+    #box2{
+      font-weight: 400;
+      color: #979BA3;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner">
+      <img src="./images/image-qr-code.png" alt="QR code" class="qrcode">
+      <div id="box1"><span>Improve your front-end</span><span>skills by building projects</span></div>
+      <div id="box2"><span>Scan the QR code to visit Frontend</span><span>Mentor and take your coding skills to</span><span>the next level</span></div>
+    </div>
+  </div>
+</body>
+</html>
