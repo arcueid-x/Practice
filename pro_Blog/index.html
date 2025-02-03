@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Blog preview card</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap');
+  </style>
+  <style>
+    html{
+      font-size:16px;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .outer{
+      width: 100vw;
+      height: 100vh;
+      background-color: hsl(47, 88%, 63%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .innerCard{
+      width: 384px;
+      height: 522px;
+      background-color: hsl(0, 0%, 100%);
+      border-radius: 20px;
+      box-shadow: 8px 8px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 201px auto 32px;
+      padding: 24px;
+      box-sizing: border-box;
+      gap: 24px;
+      font-family: 'Figtree',serif;
+    }
+    .innerCard .ig1{
+      height: 201px;
+      border-radius: 10px;
+    }
+    .learn{
+      font-size: 14px;
+      font-weight:800;
+      padding: 4px 12px;
+      background-color: hsl(47, 88%, 63%);
+      border-radius: 4px;
+      box-sizing: border-box;
+      line-height: 150%;
+    }
+    .date{
+      font-size: 14px;
+      padding-top: 12px;
+      line-height: 150%;
+    }
+    .title{
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 150%;
+      padding-top:12px;
+    }
+    .content{
+      padding-top: 12px;
+      color:#6B6B6B;
+      line-height: 150%;
+    }
+    .innerCard .ig2{
+      height: 32px;
+      width: 32px;
+      vertical-align: middle;
+    }
+    .self span{
+      font-size: 14px;
+      font-weight: 800;
+      margin-left: 12px;
+      line-height: 150%;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="innerCard">
+      <div><img src="./assets/images/illustration-article.svg" alt="img1" class="ig1"></div>
+      <div>
+        <span class="learn">Learning</span>
+        <div class="date">Published 21 Dec 2023</div>
+        <div class="title">HTML && CSS foundations</div>
+        <div class="content">This languages are the backbone of every<br>website,defining structure,content,and<br>presentation</div>
+      </div>
+      <div class="self"><img src="./assets/images/image-avatar.webp" alt="img2" class="ig2"><span>Greg Hooper</span></div>
+    </div>
+  </div>
+</body>
+</html>
