@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Social links profile</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap');
+  </style>
+  <style>
+    :root{
+      --white:hsl(0, 0%, 100%);
+      --green:hsl(75, 94%, 57%);
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    a{
+      text-decoration: none;
+    }
+    a:visited{
+      color:inherit;
+    }
+    html{
+      font-size: 14px;
+      color:var(--white);
+      font-family: "Inter", sans-serif;
+    }
+    .outer{
+      width: 100vw;
+      height: 100vh;
+      background: #141414;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card{
+      text-align: center;
+      background: #1F1F1F;
+      width: 385px;
+      height: 615px;
+      border-radius: 10px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(4, 1fr);
+      align-items: center;
+      justify-items: center;
+    }
+    .card img{
+      height: 90px;
+      border-radius: 50%;
+    }
+    .function_list{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .function_list span{
+      background-color: #333333;
+      display: block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      height: 40px;
+      font-weight: 700;
+      line-height: 40px;
+      transition: all 0.3s ease-in-out;
+    }
+    .function_list span:hover{
+      background-color:var(--green);
+    }
+    .info{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .info span{
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--green);
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="card">
+      <img class="card__image" src="./assets/images/avatar-jessica.jpeg" alt="Victor Crest">
+      <div class="info">Jessica Randall<br><span>London,United Kingdom</span></div>
+      <div class="dirt">"Front-end developer and avid reader"</div>
+      <div class="function_list">
+        <span><a href="https://github.com/" target="_blank">Github</a></span>
+        <span><a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a></span>
+        <span>LinkedIn</span>
+        <span>Twitter</span>
+        <span>Instagram</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
