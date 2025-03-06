@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+  </style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+  </style>
+  <style>
+    :root{
+      --green-500:hsl(158, 36%, 37%);
+      --green-700:hsl(158, 42%, 18%);
+      --black:hsl(212, 21%, 14%);
+      --grey:hsl(228, 12%, 48%);
+      --cream:hsl(30, 38%, 92%);
+      --white:hsl(0, 0%, 100%);
+      --Mfont:'Montserrat', sans-serif;
+      --Ffont:'Fraunces', sans-serif;
+    }
+    html{
+      font-size: 14px;
+    }
+    body{
+      background-color: var(--cream);
+    }
+    .card{
+      max-width: 600px;
+      min-height: 450px;
+      margin: calc(50vh - 225px) auto;
+      border-radius: 1rem;
+      background: var(--white);
+      display: flex;
+    }
+    .card-imag1{
+      width: 21rem;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1rem 0 0 1rem;
+    }
+    .card-body{
+      display: grid;
+      grid-template-rows: repeat(5, auto);
+      padding: 1.5em 2em;
+      width: 100%;
+      gap: 1em;
+      align-items: center;
+    }
+    .head-title{
+      letter-spacing: 2px;
+      font-size: 1.5rem;
+      font-family: var(--Mfont);
+      color: var(--grey);
+    }
+    .title{
+      font-size: 2.5rem;
+      font-family: var(--Ffont);
+      font-weight: 700;
+    }
+    .text{
+      font-family: var(--Mfont);
+      font-size: 1rem;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+    .nums{
+      display: flex;
+      align-items: center;
+    }
+    .num1{
+      font-family: var(--Ffont);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--green-500);
+      margin-right: .5em;
+      /*vertical-align: middle;*/
+    }
+    .num2{
+      color: var(--grey);
+    }
+    .btn{
+      background-color: var(--green-500);
+      border-radius: .3rem;
+      text-align: center;
+      padding: .8em;
+      color: var(--white);
+      font-size: 1.125rem;
+      font-weight: 700;
+      font-family: var(--Mfont);
+      transition: all .2s;
+    }
+    .btn:hover{
+      background-color: var(--green-700);
+    }
+    .card-imag2{
+      vertical-align: middle;
+      margin-right: 1em;
+      line-height: 1.5;
+    }
+  </style>
+  <style>
+    @media(max-width:400px){
+      .card{
+        flex-wrap:wrap;
+        height: 90vh;
+        width: 90vw;
+        margin: 3em auto;
+      }
+      .card-header{
+        width: 100%;
+      }
+      .card-imag1{
+        width: 100%;
+        height: 20em;
+        object-fit: cover;
+        border-radius: 1rem 1rem 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="card-header">
+      <img class="card-imag1" src="images/image-product-desktop.jpg" alt="perfume image">
+    </div>
+    <div class="card-body">
+      <span class="head-title">Perfume</span>
+      <div class="title">Gabrielle Essence Eau De Parfum</div>
+      <span class="text">A floral, solar and voluptuous interpretation composed by Olivier Polge,Perfumer-Creator for the House of CHANEL.</span>
+      <div class="nums"><span class="num1">$149.99</span><span class="num2"><del>$169.99</del></span></div>
+      <div class="btn">
+        <img class="card-imag2" src="images/icon-cart.svg" alt="cart"><span>Add to Cart</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    const viewportWidth = document.documentElement.clientWidth;
+    if( viewportWidth < 400 ){
+      console.log('viewport width ' + window.innerWidth);
+      document.querySelector('.card-imag1').src='images/image-product-mobile.jpg';
+    }
+  </script>
+</body>
+</html>
